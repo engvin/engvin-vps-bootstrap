@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ "$(id -u)" != "0" ]; then
+    echo "This script must be run as root"
+    echo "Этот скрипт должен быть запущен с правами root"
+    exit 1
+fi
+
 echo -e "\n=== engvin vps bootstrap ==="
 echo "Версия: 0.1"
 echo "Дата релиза: 2025-08-05"
